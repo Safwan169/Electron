@@ -1,9 +1,9 @@
 const express=require('express')
-const mainRoute=express.Router()
+const router=express.Router()
+const AuthRoute=require('./controllers/auth/_route')
+
+router.use('/auth',AuthRoute)
 
 
 
-
-
-
-module.exports = mainRoute
+module.exports = router
