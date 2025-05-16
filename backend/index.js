@@ -5,7 +5,9 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const mainRoute = require('./routes');
 const configDB = require('./config/db');
+const passport = require('./config/passport');
 
+app.use(passport.initialize());
 dotenv.config();
 
 app.use(cors({origin:'*',

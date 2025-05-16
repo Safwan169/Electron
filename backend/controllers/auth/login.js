@@ -1,4 +1,4 @@
-const User = require("../../models/shema/User");
+const User = require("../../models/schema/User");
 const { comparePassword } = require("../../utils/bcryptPassword");
 const genrateToken = require("../../utils/generateToken");
 const login = async (req, res) => {
