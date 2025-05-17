@@ -10,6 +10,7 @@ function App() {
       <div className='text-3xl text-center uppercase items-center h-screen justify-center flex'>
         🚧 UI is now under development
       </div>
+      <a href=""></a>
     </>
   )
 }
