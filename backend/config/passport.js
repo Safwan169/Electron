@@ -5,7 +5,6 @@ const jwt = require('jsonwebtoken'); // Make sure to install this
 const dotenv=require('dotenv')
 dotenv.config()
 // Your JWT secret key
-const JWT_SECRET = 'your-jwt-secret'; // Store this in an environment variable in production
 
 passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID,
@@ -30,7 +29,7 @@ passport.use(new GoogleStrategy({
     // Generate JWT token
     const token = jwt.sign(
       { id: user._id, email: user.email },
-      JWT_SECRET,
+      'JWT_SECRET',
       { expiresIn: '7d' } // Token expires in 7 days
     );
     
